@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-media Queries</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        @media (max-width:300px) {
+            body {
+                background-color: red;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+            aside{
+                display: none;
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width:500px) and (max-width:800px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width:800px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>Learn css in hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus fugiat minima doloremque adipisci unde error asperiores? Saepe ut nisi ipsam odit natus dolores veritatis numquam adipisci ea id soluta illo rem aut, velit voluptatem quidem illum, impedit, aperiam libero assumenda deleniti et vel tenetur cum! Facere accusamus suscipit tempore iusto deleniti quisquam magni a culpa quasi dolores, sint quam nesciunt quas esse explicabo aspernatur eveniet unde quaerat. Rem dignissimos porro magnam beatae magni ad quaerat unde dolorem, dicta, cupiditate iusto error minima optio repellendus esse voluptas enim quidem ea repudiandae labore? Soluta nam et ea libero corrupti dolorem, perspiciatis ex? Ea, inventore ullam porro aliquid repudiandae commodi quas iure facere explicabo hic, eius magnam quidem dolor modi consequuntur illo laborum odio corporis beatae totam officiis ex dolorum molestias. Repellat quidem tempora ipsum, unde excepturi ab eligendi soluta temporibus adipisci neque sequi non vero atque, nobis eos delectus qui nemo.</p>
+        </section>
+        <aside class="bdr">
+            <h1>More about us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">Copyright CodeWithDJBhai 2022</footer>
+</body>
+
+</html>

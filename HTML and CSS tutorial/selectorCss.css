@@ -1,0 +1,11 @@
+div{
+    border-radius: 5px;
+}
+#main-id{
+    background-color: rgb(28, 163, 124);
+    color: rgb(0, 0, 0);
+}
+.main-section{
+    background-color: rgb(36, 186, 59);
+    color: rgb(176, 128, 128);
+}
